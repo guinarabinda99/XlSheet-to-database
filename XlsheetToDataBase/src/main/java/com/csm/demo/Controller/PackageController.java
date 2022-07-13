@@ -26,6 +26,7 @@ public class PackageController {
 		
 		if(HelperClass.checkExcelFormat(file)) {
 			packageService.save(file);
+			System.out.println("shhs");
 			return ResponseEntity.ok(Map.of("Message","File is Uploaded Successfully into Database"));
 		}
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Please Upload Excel File Only");
